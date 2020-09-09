@@ -29,12 +29,13 @@ end
 
 def apply_clearance(cart)
  counter = 0 
- while counter < cart.length
-  if cart[counter][:clearance]
-    
-  end
+  while counter < cart.length
+    if cart[counter][:clearance]
+      discount = (cart[counter][:price] - (cart[counter][:price] * 0.20)).round(2)
+    end
   counter += 1
- end
+  end
+  cart
 end
 
 def checkout(cart, coupons)
