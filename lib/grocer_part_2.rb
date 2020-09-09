@@ -30,9 +30,9 @@ end
 def apply_clearance(cart)
 
   cart.each do |discount|
-    if cart[discount][:clearance] 
+    if discount[:clearance] 
       binding.pry
-      new_price = (cart[discount][:price] - (cart[discount][:price] * .20)).round(2)
+      new_price = (discount[:price] - discount[:price] * .20)).round(2)
     end
   end
   new_price
