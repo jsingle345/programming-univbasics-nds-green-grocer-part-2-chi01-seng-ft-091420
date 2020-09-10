@@ -53,5 +53,5 @@ def checkout(cart, coupons)
     end
   counter += 1
   end
-  total
+  final_cart
 end
